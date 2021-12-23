@@ -1,15 +1,15 @@
 <template>
-  <div id="app">
-    <Hello/>
-  </div>
+    <div>
+      <MyTask/>
+    </div>
 </template>
 
 <script>
-import hello from './components/Hello'
+import MyTask from './components/task/MyTask'
 export default {
   name: 'App',
   components: {
-    hello
+    MyTask
   }
 }
 </script>
