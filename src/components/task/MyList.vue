@@ -38,31 +38,7 @@
 <script>
 export default {
   name: "MyList",
-  data(){
-    return{
-      tableData: [{
-        id: 'hdjaksdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksfgfdshajk',
-        title: '学代码',
-        done: false
-      },{
-        id: 'hdjaksdgfgfdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksdfdfgfdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksdfgfgdhajk',
-        title: '学代码',
-        done: true
-      }]
-    }
-  },
+  props:['tableData'],
   created() {
     this.$nextTick(() => {
       for (let i = 0; i < this.tableData.length; i++) {

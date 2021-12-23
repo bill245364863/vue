@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
     <el-row :gutter="20">
-      <el-col :span="8"><i class="el-icon-edit"><span>完成0/未完成0</span></i></el-col>
-      <el-col :span="6" :offset="7">
-        <el-button type="primary" icon="el-icon-delete-solid">清除已完成任务</el-button>
+      <el-col :span="12"><el-link type="primary" disabled>已完成0</el-link>/<el-link type="danger" disabled>未完成1</el-link></el-col>
+      <el-col :span="6" :offset="4">
+        <el-button type="danger" icon="el-icon-delete-solid">清除已完成任务</el-button>
       </el-col>
     </el-row>
 
