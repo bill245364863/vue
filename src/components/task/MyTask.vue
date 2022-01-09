@@ -6,8 +6,8 @@
           <div slot="header" class="clearfix">
             <span>我的代办任务</span>
           </div>
-          <MyHead :receive="receive"/>
-          <MyList :tableData="tableData"/>
+          <MyHead />
+          <MyList />
           <MyFooter/>
         </el-card>
       </el-col>
@@ -22,39 +22,9 @@ import MyFooter from './MyFooter'
 
 export default {
   name: "MyTask",
-  data(){
-    return{
-      tableData: [{
-        id: 'hdjaksdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksfgfdshajk',
-        title: '学代码',
-        done: false
-      },{
-        id: 'hdjaksdgfgfdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksdfdfgfdhajk',
-        title: '学代码',
-        done: true
-      },{
-        id: 'hdjaksdfgfgdhajk',
-        title: '学代码',
-        done: true
-      }]
-    }
-  },
   components: {
     MyHead, MyList, MyFooter
   },
-  methods: {
-    receive(x){
-      this.tableData.unshift(x)
-    }
-  }
 }
 </script>
 
