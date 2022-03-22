@@ -1,18 +1,18 @@
 <template>
   <div>
     <el-row :gutter="20">
-<!--      事件总线-->
+      <!--      事件总线-->
       <el-col :span="7">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span>我的代办任务 [事件总线]</span>
           </div>
-          <MyHead />
-          <MyList />
+          <MyHead/>
+          <MyList/>
           <MyFooter/>
         </el-card>
       </el-col>
-<!--      插槽-->
+      <!--      插槽-->
       <el-col :span="7">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -21,20 +21,38 @@
           <UseSlot></UseSlot>
         </el-card>
       </el-col>
-<!--      vuex-->
+      <!--      vuex-->
       <el-col :span="7">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span>vuex [actions,mutations,state,getters,commit,dispatch]</span>
           </div>
-          <School/>
-          <hr/>
-          <Student/>
+          <el-row>
+            <el-col>
+              <el-card class="box-card">
+                <div slot="header" class="clearfix">
+                  <span>School</span>
+                </div>
+                <School/>
+              </el-card>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col >
+              <el-card class="box-card">
+                <div slot="header" class="clearfix">
+                  <span>Student</span>
+                </div>
+                <Student/>
+              </el-card>
+            </el-col>
+          </el-row>
         </el-card>
       </el-col>
 
     </el-row>
     <el-row :gutter="20">
+<!--      路由跳转-->
       <el-col :span="7">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -43,8 +61,17 @@
 
         </el-card>
       </el-col>
-
+<!--      请求跨域测试-->
+      <el-col :span="7">
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <span>axios</span>
+          </div>
+          <RequestDemo></RequestDemo>
+        </el-card>
+      </el-col>
     </el-row>
+
   </div>
 </template>
 
@@ -55,10 +82,12 @@ import MyFooter from './MyFooter'
 import UseSlot from '../slot/use'
 import School from "@/components/vuex/School";
 import Student from "@/components/vuex/Student";
+import RequestDemo from "@/components/axiso/request"
+
 export default {
   name: "MyTask",
   components: {
-    MyHead, MyList, MyFooter ,UseSlot,School,Student
+    MyHead, MyList, MyFooter, UseSlot, School, Student, RequestDemo
   },
 }
 </script>
